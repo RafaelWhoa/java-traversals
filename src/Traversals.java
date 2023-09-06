@@ -80,8 +80,7 @@ public class Traversals<T extends Comparable<? super T>> {
      * @param traverseList The list to save pre-order elements.
      */
     private void preOrderR(TreeNode<T> node, List<T> traverseList){
-        if (node != null){
-            //System.out.println(node.getData());
+        if (node != null){;
             traverseList.add(node.getData());
             preOrderR(node.getLeft(), traverseList);
             preOrderR(node.getRight(), traverseList);
@@ -101,7 +100,6 @@ public class Traversals<T extends Comparable<? super T>> {
     private void inorderR(TreeNode<T> node, List<T> traverseList){
         if (node != null){
             inorderR(node.getLeft(), traverseList);
-            //System.out.println(node.getData());
             traverseList.add(node.getData());
             inorderR(node.getRight(), traverseList);
         }
