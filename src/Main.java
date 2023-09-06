@@ -28,6 +28,7 @@ public class Main {
 
         preOrderList = traversals.preorder(node1);
         inorderList = traversals.inorder(node1);
+        postOrderList = traversals.postorder(node1);
 
         for (Integer n: preOrderList
         ) {
@@ -39,6 +40,15 @@ public class Main {
         System.out.println("Inorder list:");
 
         for (Integer n: inorderList
+             ) {
+            System.out.println(n);
+        }
+
+        System.out.println("------------------");
+
+        System.out.println("Post-order list:");
+
+        for (Integer n: postOrderList
              ) {
             System.out.println(n);
         }
