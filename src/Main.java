@@ -1,5 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
+
+        Traversals<Integer> traversals = new Traversals<>();
 
         TreeNode<Integer> node1 = new TreeNode<>(50);
         TreeNode<Integer> node2 = new TreeNode<>(25);
@@ -15,6 +20,15 @@ public class Main {
         node3.setRight(node6);
         node6.setLeft(node7);
 
+        List<Integer> testeList;
 
+        testeList = traversals.preorder(node1);
+
+        System.out.println("------------------");
+
+        for (Integer n: testeList
+             ) {
+            System.out.println(n);
+        }
     }
 }
