@@ -43,7 +43,7 @@ public class Traversals<T extends Comparable<? super T>> {
      */
     private void preOrderR(TreeNode<T> node, List<T> traverseList){
         if (node != null){
-            System.out.println(node.getData());
+            //System.out.println(node.getData());
             traverseList.add(node.getData());
             preOrderR(node.getLeft(), traverseList);
             preOrderR(node.getRight(), traverseList);
@@ -64,8 +64,28 @@ public class Traversals<T extends Comparable<? super T>> {
      * @return List containing the in-order traversal of the tree.
      */
     public List<T> inorder(TreeNode<T> root) {
-        // WRITE YOUR CODE HERE (DO NOT MODIFY METHOD HEADER)!
-        return null;
+        List<T> traverseList = new ArrayList<>();
+        inorderR(root, traverseList);
+        return traverseList;
+    }
+
+    /**
+     * Given the current node and traverseList to save inorder list,
+     * traverse all the Binary Search Tree recursively.
+     * <p/>
+     * O(n) function.
+     *
+     * @param <T> Generic type.
+     * @param node The current node.
+     * @param traverseList The list to save pre-order elements.
+     */
+    private void inorderR(TreeNode<T> node, List<T> traverseList){
+        if (node != null){
+            inorderR(node.getLeft(), traverseList);
+            //System.out.println(node.getData());
+            traverseList.add(node.getData());
+            inorderR(node.getRight(), traverseList);
+        }
     }
 
     /**

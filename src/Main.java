@@ -20,13 +20,25 @@ public class Main {
         node3.setRight(node6);
         node6.setLeft(node7);
 
-        List<Integer> testeList;
+        List<Integer> preOrderList;
+        List<Integer> inorderList;
+        List<Integer> postOrderList;
 
-        testeList = traversals.preorder(node1);
+        System.out.println("Pre-order list:");
+
+        preOrderList = traversals.preorder(node1);
+        inorderList = traversals.inorder(node1);
+
+        for (Integer n: preOrderList
+        ) {
+            System.out.println(n);
+        }
 
         System.out.println("------------------");
 
-        for (Integer n: testeList
+        System.out.println("Inorder list:");
+
+        for (Integer n: inorderList
              ) {
             System.out.println(n);
         }
